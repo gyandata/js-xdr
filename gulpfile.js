@@ -25,7 +25,8 @@ gulp.task('lint:test', function lintTest() {
 
 gulp.task(
   'build:node',
-  gulp.series('lint:src', function buildNode() {
+  gulp.series(function buildNode() {
+    //'lint:src',
     return gulp
       .src('src/**/*.js')
       .pipe(plugins.babel())
